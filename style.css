@@ -1,0 +1,68 @@
+/* Importação das Fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Teko:wght@600;700&display=swap');
+
+/* Estilo para o body enquanto carrega */
+body.loading {
+    overflow: hidden;
+}
+
+/* Estilos do Preloader (Animação de Carregamento) */
+.preloader {
+    /* Oculta o preloader por padrão se o JS falhar */
+    opacity: 0; 
+    pointer-events: none;
+}
+
+/* Mostra o preloader quando o body tem a classe 'loading' */
+body.loading .preloader {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Animação do Spinner */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    /* A animação 'animate-spin' do Tailwind usa essa keyframe */
+    animation: spin 1s linear infinite;
+}
+
+/* Estilos do Botão Flutuante do WhatsApp */
+.whatsapp-float {
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.logo{
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Estilos para centralizar os títulos de seção */
+section h2.inline-block {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
