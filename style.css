@@ -41,7 +41,7 @@ body.loading .preloader {
 
 .logo{
     width: 100%;
-    height: auto;
+    height: auto;;
 }
 
 @keyframes pulse-whatsapp {
